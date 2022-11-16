@@ -189,17 +189,6 @@ class BtOrderManager1:
                 self.exit_all('stop_loss')
 
     def get_report(self):
-        """
-        self.pl_list = [0]
-        self.long_trades_list = []
-        self.short_trades_list = []
-
-        self.num_win_long_trades = 0
-        self.num_loss_long_trades = 0
-
-        self.num_win_short_trades = 0
-        self.num_los_short_trades = 0
-        """
         # remove first item from self.pl_list
         self.pl_list.pop(0)
 
@@ -246,10 +235,6 @@ def append_string(csv_string, file_name):
 
 def get_min_max_average(lst):
     return min(lst), max(lst), sum(lst) / len(lst)
-
-# ********************************************************************************************************************************
-# ********************************************************************************************************************************
-# ********************************************************************************************************************************
 
 
 def main_bs_v03_backtester(buy_thrsh, sel_thrsh, target, stop_loss, save_timeseries=False, price_ma_interval=7, max_percent_spike=1.0):
